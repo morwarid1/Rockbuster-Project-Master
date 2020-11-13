@@ -1,0 +1,49 @@
+
+#5 Filtering Data
+### SQL Query 
+Select film_id, title, description from film
+where title like 'uptown'
+
+Select release_year, film_id, title, description from film
+
+Select rental_duration, title, film_id, description from film
+where rental_duration between 3 and 10
+
+Select replacement_cost from film
+where replacement_cost < 14.99
+
+Select replacement_cost, film_id, title, description from film
+where replacement_cost < 14.99
+
+Select rating, film_id, title, description from film
+where rating = 'PG' OR rating = 'G'
+
+Select film_id, count (film_id) as count_of_movies from film
+group by film_id
+
+Select film_id, AVG (rental_rate) from film
+group by film_id
+
+Select max(rental_duration), min (rental_duration) from film
+
+### count of movies
+Select film_id, count (film_id) as count_of_movies from film
+Group by film_id
+
+Select rental_rate, AVG (rental_rate) as average_movie_renatal_rate from film
+Group by rental_rate
+
+### maximum rental duration
+### minimum rental duration
+Select rental_duration, max (rental_duration) as maximum_rental_duration,
+min (rental_duration) as minimum_rental_duration from film
+Group by rental_duration
+
+Select film_id, count (film_id) as count_of_movies from film
+group by film_id, rating
+
+Select AVG (rental_rate) from film
+group by rating
+
+Select max (rental_duration), min (rental_duration) from film
+group by rating

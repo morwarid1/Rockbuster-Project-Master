@@ -1,0 +1,57 @@
+
+Here is a SQL query with a common table expression.
+
+- Finding the average amount paid by the top 5 customers
+
+WITH "Average" AS
+(select payment.customer_id as "Customer_ID", customer.first_name as "First_Name", customer.last_name as "Last_Name", Country.country as "Country", city.city as "City",
+ sum(payment.amount) as "Total Amount Paid" from country
+ join city
+ on country.country_id = city.country_id
+ join address
+ on city.city_id = address.city_id
+ join customer
+ on customer.address_id = address.address_id
+ join payment
+ on payment.customer_id = customer.customer_id
+ Where city.city in('Saint-Denis','Cape Coral','Santa Brbara dOeste','Apeldoorn','Molodetno','Qomsheh','London','Memphis','Richmond Hill','Tanza')
+ group by city.city,payment.customer_id, customer.first_name , customer.last_name, Country.country, payment.amount
+ order by "amount" DESC
+ Limit 10)
+ select AVG ("Total Amount Paid") AS "Average amount paid","First_Name"
+ from "Average"
+ group by "First_Name"
+ limit 5
+
+- Finding out how many of the top 5 customers are based within each country.
+WITH "top_5_customers" as
+(select payment.customer_id, customer.first_name, customer.last_name, Country.country, city.city,
+ sum(payment.amount) as "Total Amount Paid" from country
+ join city
+ on country.country_id = city.country_id
+ join address
+ on city.city_id = address.city_id
+ join customer
+ on customer.address_id = address.address_id
+ join payment
+ on payment.customer_id = customer.customer_id
+ Where city.city in('Saint-Denis','Cape Coral','Santa Brbara dOeste','Apeldoorn','Molodetno','Qomsheh','London','Memphis','Richmond Hill','Tanza')
+ group by city.city,payment.customer_id, customer.first_name , customer.last_name, Country.country, payment.amount
+ order by "amount" DESC
+ Limit 10)
+ 
+ Select country.country, count(Distinct customer.customer_id) as "all_customer_count",
+ count(Distinct "top_5_customers".customer_id) as "top_customer_count" from "top_5_customers"
+ 
+ right join country
+ on country.country = "top_5_customers".country
+ join city
+ on country.country_id = city.country_id
+ join address
+ on city.city_id = address.city_id
+ join customer
+ on customer.address_id = address.address_id
+ 
+ group by country.country
+ order by top_customer_count DESC
+ LIMIT 10 

@@ -1,0 +1,55 @@
+
+6 Summarizing & Cleaning Data in SQL
+
+#### Check for and clean dirty Data
+#### Finding non-uniform
+Select * from film
+Select rating from film
+UPDATE film
+Set rating = 'G'
+WHERE rating IN ('PG','R','NC-17','PG-13')
+
+
+#### finding duplicate
+Select title, release_year, language_id, rental_duration, count (*)
+from film
+Group by title, release_year, language_id, rental_duration
+
+UPDATE customer
+set active = '1'
+where ACTIVE in ('0)
+
+### finding duplicate
+Select customer_id, store_id, first_name, last_name, email, activebool, create_date, last_update, active,
+count (*)
+from customer
+group by customer_id, store_id, first_name, last_name, email, activebool, create_date, last_update, active
+
+### descriptive statistics
+Select min (rental_rate) as min_rent,
+max (rental_rate) as min_rent,
+avg (rental_rate) as avg_rent,
+count (rental_rate) as count_rent_values,
+count (*) as count_rows
+from film;
+
+### non-number mode_
+Select mode() within group (order by rating)
+as modal_value
+from film;
+				 
+### descriptive statistics
+Select min (customer_id) as min_customer,
+max (customer_id) as max_customer,
+avg (customer_id) as avg_rent,
+count (customer_id) as count_customer_value,
+count (*) as count_rows
+from customer;
+				 
+### mode
+Select mode () within group (order by customer_id)
+as modal_value
+from customer;
+
+
+

@@ -1,0 +1,60 @@
+Here is a SQL query with Subqueries
+
+- Finding average amount paid by the top 5 customers
+
+Select AVG ("Total Amount Paid") AS "Average amount paid", "First_Name"
+from (select payment.customer_id as "Customer_ID", customer.first_name as "First_Name", customer.last_name as "Last_Name", Country.country as "Country", city.city as "City",
+ sum(payment.amount) as "Total Amount Paid" from country
+ join city
+ on country.country_id = city.country_id
+ join address
+ on city.city_id = address.city_id
+ join customer
+ on customer.address_id = address.address_id
+ join payment
+ on payment.customer_id = customer.customer_id
+ Where city.city in('Saint-Denis','Cape Coral','Santa Brbara dOeste','Apeldoorn','Molodetno','Qomsheh','London','Memphis','Richmond Hill','Tanza')
+ group by city.city,payment.customer_id, customer.first_name , customer.last_name, Country.country, payment.amount
+ order by "amount" DESC
+ Limit 10) as "Average"
+ group by "First_Name"
+ Limit 5 
+
+
+- Finding how many of the top 5 customers are based within each country
+
+
+Join address
+on customer.address_id = address.address_id
+join city
+on city.city_id = address.city_id
+join country
+on country.country_id = city.country_id
+
+left join
+
+(select payment.customer_id as "Customer_ID", customer.first_name as "First_Name", customer.last_name as "Last_Name", Country.country as "Country", city.city as "City",
+ sum(payment.amount) as "Total Amount Paid" from country
+ join city
+ on country.country_id = city.country_id
+ join address
+ on city.city_id = address.city_id
+ join customer
+ on customer.address_id = address.address_id
+ join payment
+ on payment.customer_id = customer.customer_id
+ Where city.city in('Saint-Denis','Cape Coral','Santa Brbara dOeste','Apeldoorn','Molodetno','Qomsheh','London','Memphis','Richmond Hill','Tanza')
+ group by city.city,payment.customer_id, customer.first_name , customer.last_name, Country.country, payment.amount
+ order by "amount" DESC
+ Limit 10) as "top_5_customers"
+ 
+ on country.country = "top_5_customers".country
+ 
+ group by country.country
+ order by top_customer_count DESC
+ LIMIT 10
+
+
+
+
+
