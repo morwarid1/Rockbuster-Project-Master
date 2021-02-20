@@ -39,11 +39,13 @@ This project helped me develop the ability to solve problems for a variety of cl
 - Finding out how many of the top 5 customers are based within each country.
 
 
-The answers to the main questions that the Rockbuster Stealth Management Board can use for their 2020 company strategy are the following:1.	Movies that contributed the most to revenue gain are Bright Encounters, Ace Goldfinger and the least are Anaconda Confessions, Artist Coldblooded and more. 
-2.	The maximum rental duration were 7 days and minimum rental duration were 3 days. 
-3.	Rockbuster customer are based on many countries. The Top 10 countries in terms of customer numbers are the following: 1) India = 60, 2) China = 53, 3) US= 36, 4) Japan =31, 5) Mexico = 30, 6) Brazil = 28, 7) Russian Federation = 28, 8) Philippines =20, 9) Turkey= 15, 10) Indonesia = 14
-4.	Customer with the high lifetime value are in the following cities: 1. Aurora, 2. Acuna, 3. Citrus Heights, 4. Iwaki, 5. Ambattur , 6. Shawnie, 7. So Leopoldo, 8. Tianjin, 9. Hami, 10. Cianjur, And the Top 5 customers paid the highest are the following:  1.Tommy Collazo = 41.96$ from Iran, 2. Eleanor Hunt = 31 $ from Réunion, 3.  Marion Snyder = 20.98$ from Brazil, 4. Karl Seal = 10.99$ from US, 5. Rhonda Kennedy = 9.99$ from Netherlands 
-5.	Yes, sales figures vary between geographic regions. For example, the count of sales is 10 in Buenos Aires, 5 in Southern Tagalog, 7 in England, 9 in California, and so on. 
+The answers to the main questions that the Rockbuster Stealth Management Board can use for their 2020 company strategy are the following |
+--------------------------------------------------------------------------------------------------------------------------------------------|
+1.	Movies that contributed the most to revenue gain are Bright Encounters, Ace Goldfinger and the least are Anaconda Confessions, Artist Coldblooded and more.|
+2.	The maximum rental duration were 7 days and minimum rental duration were 3 days.|
+3.	Rockbuster customer are based on many countries. The Top 10 countries in terms of customer numbers are the following: 1) India = 60, 2) China = 53, 3) US= 36, 4) Japan =31, 5) Mexico = 30, 6) Brazil = 28, 7) Russian Federation = 28, 8) Philippines =20, 9) Turkey= 15, 10) Indonesia = 14 |
+4.	Customer with the high lifetime value are in the following cities: 1. Aurora, 2. Acuna, 3. Citrus Heights, 4. Iwaki, 5. Ambattur , 6. Shawnie, 7. So Leopoldo, 8. Tianjin, 9. Hami, 10. Cianjur, And the Top 5 customers paid the highest are the following:  1.Tommy Collazo = 41.96$ from Iran, 2. Eleanor Hunt = 31 $ from Réunion, 3.  Marion Snyder = 20.98$ from Brazil, 4. Karl Seal = 10.99$ from US, 5. Rhonda Kennedy = 9.99$ from Netherlands |
+5.	Yes, sales figures vary between geographic regions. For example, the count of sales is 10 in Buenos Aires, 5 in Southern Tagalog, 7 in England, 9 in California, and so on. |
 
 **My recommendations** 
 The Rockbuster should invest more in the above customers, cities, and countries for better profit. While doing this project, I learned that SQL is just a language. By writing the right command and queries, we can get SQL to do any kind of analysis with the data. Things that I would do differently to improve is to write advanced queries. It would help save time. 
