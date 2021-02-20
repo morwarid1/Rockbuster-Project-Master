@@ -48,9 +48,6 @@ The answers to the main questions that the Rockbuster Stealth Management Board c
 **My recommendations** 
 The Rockbuster should invest more in the above customers, cities, and countries for better profit. While doing this project, I learned that SQL is just a language. By writing the right command and queries, we can get SQL to do any kind of analysis with the data. Things that I would do differently to improve is to write advanced queries. It would help save time. 
 
-**Link to Tableau:**   
--	https://public.tableau.com/profile/morwarid.najafizada#!/vizhome/Top5customerinthetop10citieswhohavepaidthehighesttotalamountstotheRockbuster/Sheet3 
--	https://public.tableau.com/profile/morwarid.najafizada#!/vizhome/Top10citieswithinthetop10countriesidentified/Sheet1
--	https://public.tableau.com/profile/morwarid.najafizada#!/vizhome/Top10countriesforRockbusterintermofcustomernumbers/1
+- Click [here](https://public.tableau.com/profile/morwarid.najafizada#!/vizhome/RockbusterStealthDataAnalysisProject/Rockbuster) to view the full Tableau Dashboard 
 
 
