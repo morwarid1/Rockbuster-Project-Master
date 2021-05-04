@@ -1,7 +1,7 @@
 # Rockbuster Stealth Data Analysis Project
 
 The main purpose of this sample project is to launch a strategy for the new online video rental service. This project will help to better understand the Rockbuster Database and have better insight for future Rockbuster product investments. 
-My rule as a data analyst is to help with the launch of the strategy. And I can do that by answering any ad-hoc business questions that other department might have. My first task will be loading all of the Rockbuster's data into a relational database management system (RDBMS). Rockbuster data set contains information about Rockbuster's film, inventory, customers, and payments, among other things. Tools used for this project was SQL and Excel. My task was to answer the following questions:
+My rule as a data analyst is to help with the launch of the strategy by answering any ad-hoc business questions that other department might have. My first task will be loading all of the Rockbuster's data into a relational database management system (RDBMS). Rockbuster data set contains information about Rockbuster's film, inventory, customers, and payments, among other things. Tools used for this project was SQL and Excel. My task was to answer the following questions:
 
 
 **Key Questions:**
